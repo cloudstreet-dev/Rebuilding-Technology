@@ -20,7 +20,15 @@ Each chapter is written to be as self-contained as possible, with cross-referenc
 
 ## Table of Contents
 
-### Foundational Technologies (Tier 0-1)
+### Survival and Social Foundations (Year 0-5)
+
+**[Chapter -1: Immediate Survival](­-01-immediate-survival.md)** ⚠️ **READ THIS FIRST**
+- Water purification (boiling, sand filters, solar distillation)
+- Food preservation (smoking, salting, drying, fermentation, root cellars)
+- Sanitation and disease prevention (latrines, waste management)
+- Shelter construction (before you can build a forge, you need a roof)
+- Security and governance (social stability is prerequisite to specialization)
+- **Do not proceed to technology chapters until these systems are stable**
 
 **[Chapter 0: Introduction](00-introduction.md)**
 - Purpose of this guide
@@ -28,6 +36,18 @@ Each chapter is written to be as self-contained as possible, with cross-referenc
 - How to use it
 - Technology tiers and progression
 - Critical success factors
+
+**[Chapter 0.5: Agriculture and Food Production](00.5-agriculture-food-production.md)**
+- Why food surplus enables technological specialization
+- Seed saving and preservation (genetic diversity)
+- Crop rotation and soil management
+- Animal husbandry (draft animals, protein, leather)
+- Irrigation systems
+- Tool making for agriculture
+- Food storage and pest control
+- Timeline: Year 1 subsistence → Year 10 stable surplus
+
+### Foundational Technologies (Tier 0-1)
 
 **[Chapter 1: Salvaging the Old World](01-salvaging-the-old-world.md)**
 - Why salvage matters
@@ -47,6 +67,14 @@ Each chapter is written to be as self-contained as possible, with cross-referenc
 - Precision metalworking (lathe, mill)
 - Mining and refining from ore
 
+**[Chapter 2.5: Textiles](02.5-textiles.md)**
+- Fiber production (cotton, wool, flax, hemp)
+- Spinning and weaving
+- Leather tanning
+- Dyeing
+- Sewing and clothing construction
+- Timeline and labor requirements
+
 **[Chapter 3: Electricity Generation and Storage](03-electricity-generation-and-storage.md)**
 - Understanding electricity basics
 - Generating electricity (hydro, wind, solar, steam)
@@ -56,6 +84,26 @@ Each chapter is written to be as self-contained as possible, with cross-referenc
 - Power system sizing
 - Safety
 
+**[Chapter 3.5: Medicine and Public Health](03.5-medicine-public-health.md)**
+- Disease prevention and sanitation
+- Herbal medicine and traditional remedies
+- Wound care and basic surgery
+- Penicillin production (achievable with basic chemistry!)
+- Childbirth assistance
+- Dental care
+- Common diseases and treatment
+- Medical tool making
+- Sterilization techniques
+
+**[Chapter 3.7: Transportation](03.7-transportation.md)**
+- Human-powered transport (bicycles, carts)
+- Animal-powered transport (draft animals, harnesses, wagons)
+- Water transport (boats, navigation)
+- Roads and bridges
+- Wheels and axles manufacturing
+- Maintaining salvaged vehicles
+- Steam engines for transport
+
 **[Chapter 4: Essential Chemistry](04-essential-chemistry.md)**
 - Safety protocols
 - Basic equipment (glassware, heating, filtration)
@@ -64,6 +112,15 @@ Each chapter is written to be as self-contained as possible, with cross-referenc
 - Semiconductor purification
 - Electrochemistry
 - Explosives (handle with extreme care)
+
+**[Chapter 4.5: Paper and Printing](04.5-paper-printing.md)**
+- Paper production from plant fibers
+- Ink making (carbon ink, iron gall ink)
+- Printing press construction (Gutenberg-style)
+- Movable type casting
+- Bookbinding
+- **Critical priority: Copy this guide! Books decay.**
+- Establishing a print shop
 
 ### Electronics and Computing (Tier 2-3)
 
@@ -75,6 +132,14 @@ Each chapter is written to be as self-contained as possible, with cross-referenc
 - Integrated circuits (salvage and use)
 - Circuit construction techniques
 - Test equipment
+
+**[Chapter 5.5: Optics](05.5-optics.md)**
+- Why optics are essential (chemistry, medicine, biology, astronomy)
+- Lens grinding from salvaged glass
+- Microscopes (essential for chemistry and medicine!)
+- Telescopes (navigation, timekeeping, astronomy)
+- Spectroscopy basics (chemical analysis)
+- Eyeglasses (vision correction)
 
 **[Chapter 6: Telegraph and Radio Communication](06-telegraph-radio-communication.md)**
 - Telegraph systems
@@ -182,13 +247,29 @@ Each chapter is written to be as self-contained as possible, with cross-referenc
 
 ## Technology Tier Summary
 
-### Tier 0: Survival Technology (Immediate - Years 0-5)
+### Tier -1: Immediate Survival (Years 0-2)
+⚠️ **DO NOT SKIP THIS TIER**
+- Water purification and storage
+- Food preservation
+- Sanitation and waste management
+- Shelter construction
+- Basic medicine and hygiene
+- Security and governance
+- **Goal: Stay alive and establish stability**
+
+### Tier 0: Subsistence and Surplus (Years 1-10)
+- Agriculture and food surplus (enables specialization)
+- Textiles (clothing wears out)
+- Paper and printing (preserve and copy this guide!)
 - Salvaging materials
 - Basic metallurgy and smithing
 - Simple chemistry
 - Mechanical power (water, wind)
+- Transportation (bicycles, draft animals, boats)
 
-### Tier 1: Foundation Technology (Years 1-10)
+### Tier 1: Foundation Technology (Years 5-15)
+- Medicine and public health (penicillin production!)
+- Optics (microscopes, telescopes, lenses)
 - Electricity generation and storage
 - Basic electronics (diodes, resistors, capacitors, simple circuits)
 - Telegraph and radio communication
@@ -228,17 +309,21 @@ Each chapter is written to be as self-contained as possible, with cross-referenc
 
 ## Critical Success Factors
 
-1. **Preserve Knowledge**: Protect this guide and all technical documentation. Create copies. Store in multiple locations. Digital and physical.
+1. **Survive First, Technology Second**: Read Chapter -1 before anything else. You cannot rebuild electronics if everyone is dead from dysentery. Water, food, sanitation, and shelter come before metallurgy.
 
-2. **Organize Systematically**: Technology requires specialization. Establish schools and apprenticeships. Each generation must teach the next.
+2. **Preserve Knowledge**: Protect this guide and all technical documentation. **Copy this guide immediately** using the techniques in Chapter 4.5 (Paper and Printing). Books decay. Store copies in multiple locations. Digital and physical.
 
-3. **Salvage First, Manufacture Second**: The ruins contain refined materials and functional components. Never mine what you can salvage. The energy cost has already been paid.
+3. **Organize Systematically**: Technology requires specialization. But specialization requires food surplus (Chapter 0.5). You cannot have blacksmiths if everyone must farm. Agriculture enables everything else.
 
-4. **Document Failures**: Failed attempts teach as much as successes. Record what doesn't work and why.
+4. **Salvage First, Manufacture Second**: The ruins contain refined materials and functional components. Never mine what you can salvage. The energy cost has already been paid.
 
-5. **Think Generationally**: You probably won't see AI or modern computing rebuilt in your lifetime. You're laying foundations for your children's children. That's okay. This is a multi-generational project.
+5. **Document Failures**: Failed attempts teach as much as successes. Record what doesn't work and why.
 
-6. **Build Communities**: No one person can rebuild technology. This requires cooperation, coordination, and knowledge sharing across communities and regions.
+6. **Think Generationally**: You probably won't see AI or modern computing rebuilt in your lifetime. You're laying foundations for your children's children. That's okay. This is a multi-generational project.
+
+7. **Build Communities**: No one person can rebuild technology. This requires cooperation, coordination, and knowledge sharing across communities and regions.
+
+8. **Copy This Guide**: This cannot be stressed enough. The first major technological project should be establishing a print shop (Chapter 4.5) and creating multiple copies of this guide. Distribute them widely. Books decay. Fire destroys. Redundancy saves civilization.
 
 ## Safety Warning
 
