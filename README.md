@@ -4,17 +4,19 @@
 
 This guide was compiled in 2025 as a comprehensive technical manual for rebuilding modern technology from a post-apocalyptic scenario. It assumes technological civilization has collapsed, supply chains are down, and survivors must rebuild from salvaged materials and basic resources.
 
-The guide is designed to be practical and achievable, progressing through realistic stages from immediate survival technology to advanced computing and artificial intelligence over a span of 50-100+ years.
+The guide is designed to be practical and achievable, progressing through realistic stages from immediate survival technology to advanced computing and artificial intelligence over a span of **150-300+ years**. Yes, that long. This is a multi-generational project.
 
 ## How to Use This Guide
 
 **DO NOT read this linearly from start to finish.** Technology rebuilding is not a straight path. Instead:
 
-1. **Assess your situation first**: What resources do you have? What salvage is available? How many people can you mobilize?
-2. **Start with immediate needs**: Chapters 1-3 cover salvage, metallurgy, and electricity—the foundations
-3. **Build in parallel**: Work on multiple technologies simultaneously as resources allow
-4. **Follow dependencies**: Some technologies require others (you need electricity before electronics)
-5. **Document everything**: Add your own notes, discoveries, and modifications
+1. **Read Chapter -1 FIRST**: Immediate Survival. You cannot build technology if everyone is dead.
+2. **Assess your situation**: What resources do you have? What salvage is available? How many people can you mobilize?
+3. **Establish foundations**: Water, food, shelter, security, knowledge preservation (Chapters -1, 0.5, 0.7)
+4. **Build in parallel**: Work on multiple technologies simultaneously as resources allow
+5. **Follow dependencies**: Some technologies require others (you need electricity before electronics)
+6. **Accept the timeline**: Semiconductors take centuries. Tube computers work fine. Don't rush.
+7. **Document everything**: Add your own notes, discoveries, and modifications. **Copy this guide immediately** (Chapter 4.5).
 
 Each chapter is written to be as self-contained as possible, with cross-references where dependencies exist.
 
@@ -47,6 +49,17 @@ Each chapter is written to be as self-contained as possible, with cross-referenc
 - Food storage and pest control
 - Timeline: Year 1 subsistence → Year 10 stable surplus
 
+**[Chapter 0.7: Libraries and Knowledge Preservation](00.7-libraries-knowledge-preservation.md)** ⚠️ **CRITICAL PRIORITY**
+- Why this is not optional (knowledge dies without preservation)
+- Immediate actions: Salvage all books, create climate-controlled storage
+- Book preservation science (temperature, humidity, pests, light)
+- Copying protocols (**copy this guide FIRST**)
+- Index systems and cataloging
+- Training librarians and scribes
+- Distributed backup (never one library)
+- Digital preservation (print to paper ASAP - digital is temporary)
+- **"One copy is no copies. Copy it. Now."**
+
 ### Foundational Technologies (Tier 0-1)
 
 **[Chapter 1: Salvaging the Old World](01-salvaging-the-old-world.md)**
@@ -75,6 +88,27 @@ Each chapter is written to be as self-contained as possible, with cross-referenc
 - Sewing and clothing construction
 - Timeline and labor requirements
 
+**[Chapter 2.7: Standardization](02.7-standardization.md)** ⚠️ **ESTABLISH EARLY**
+- Why standards matter (interchangeability, collaboration, trade)
+- Units of measurement (length, mass, volume, temperature)
+- Screw threads (choose ONE standard and stick with it)
+- Electrical standards (voltage, frequency, plugs, wire gauges, color coding)
+- Fasteners, tools, and materials standards
+- Communication standards (Morse, radio frequencies, data encoding)
+- Establishing and enforcing standards (standards bureau, gauge distribution)
+- **Without standards, communities become isolated islands unable to collaborate**
+
+**[Chapter 2.8: Lubricants and Seals](02.8-lubricants-seals.md)**
+- Why this mundane topic kills more machinery than anything else
+- Natural lubricants (animal fats, vegetable oils) - limitations
+- Salvaged petroleum (HOARD THIS - liquid gold)
+- Grease making (calcium grease recipe)
+- Petroleum salvage and simple refining
+- Seals and gaskets (rubber, leather, cork, fiber, rope, felt)
+- Bearing design for available lubricants
+- Maintenance practices
+- **"Machines die without lubrication. Don't skip this chapter."**
+
 **[Chapter 3: Electricity Generation and Storage](03-electricity-generation-and-storage.md)**
 - Understanding electricity basics
 - Generating electricity (hydro, wind, solar, steam)
@@ -83,6 +117,27 @@ Each chapter is written to be as self-contained as possible, with cross-referenc
 - Transformers and inverters
 - Power system sizing
 - Safety
+
+**[Chapter 3.3: Timekeeping and Calendars](03.3-timekeeping-calendars.md)**
+- Why timekeeping matters (navigation, coordination, science, agriculture)
+- Calendar systems (solar, lunar, lunisolar, leap years)
+- Simple time measurement (sundials, water clocks, sand timers)
+- Mechanical clockmaking (pendulum clocks, escapements, gear trains)
+- Precision clocks (temperature compensation, marine chronometers)
+- Synchronization (time balls, telegraph, radio signals)
+- Watchmaking (portable timepieces)
+- **Accurate timekeeping is ESSENTIAL for navigation and coordination**
+
+**[Chapter 3.4: Mapping and Navigation](03.4-mapping-navigation.md)**
+- Why mapping matters (trade routes, resources, coordination)
+- Basic surveying (pacing, chain, compass, triangulation)
+- Compass making and use
+- Theodolite construction
+- Celestial navigation (latitude, longitude, sextant)
+- Mapmaking (projections, scale, contours, symbols)
+- Map reproduction (hand copying, printing)
+- Navigation techniques (dead reckoning, pilotage, celestial)
+- **"You can't rebuild what you can't find"**
 
 **[Chapter 3.5: Medicine and Public Health](03.5-medicine-public-health.md)**
 - Disease prevention and sanitation
@@ -159,13 +214,14 @@ Each chapter is written to be as self-contained as possible, with cross-referenc
 - Core memory
 - Practical projects
 
-**[Chapter 8: Transistors and Semiconductors](08-transistors-semiconductors.md)**
-- Semiconductor fundamentals (P-N junctions, doping)
-- Transistor operation (BJT, FET, MOSFET)
-- Silicon purification and processing
-- Transistor manufacturing (planar process)
-- Discrete transistor circuits
-- Transition from tubes to transistors
+**[Chapter 8: Transistors and Semiconductors](08-transistors-semiconductors.md)** ⚠️ **REALISTIC TIMELINE**
+- **The hard truth**: Modern semiconductors may take 200-300 years
+- Phase 1: Salvage and preserve ICs (Years 10-50)
+- Phase 2: Point-contact transistors and germanium (Years 20-60)
+- Phase 3: Discrete transistor manufacturing (Years 40-100)
+- Phase 4: The long road to ICs (Years 100-200+)
+- Phase 5: Why vacuum tubes remain viable
+- **"Tube computers work fine. You will use them for a very long time. That's success."**
 
 **[Chapter 9: Building Your First Computer](09-building-computers.md)**
 - Digital logic fundamentals
@@ -177,14 +233,15 @@ Each chapter is written to be as self-contained as possible, with cross-referenc
 - Assembly and debugging
 - Programming your computer
 
-**[Chapter 10: Integrated Circuits and Microprocessors](10-microprocessors-modern-computing.md)**
-- From discrete components to ICs
-- IC design and layout
-- Photolithography
-- Microprocessor architecture (4-bit → 8-bit → 16-bit → 32-bit)
-- Manufacturing your first microprocessor
-- Peripheral ICs
-- Software development for microprocessors
+**[Chapter 10: Integrated Circuits and Microprocessors](10-microprocessors-modern-computing.md)** ⚠️ **MULTI-GENERATIONAL PROJECT**
+- **Realistic timeline**: Microprocessors are 200-300 year goal
+- Phase 1: Relay and tube computers (Years 10-50) - Your reality
+- Phase 2: Transistor hybrids (Years 50-100) - Gradual improvement
+- Phase 3: Small Scale Integration/SSI (Years 100-150) - If you're lucky
+- Phase 4: Medium Scale Integration/MSI (Years 150-200) - Still not microprocessors
+- Phase 5: Microprocessors (Years 200-300) - Multi-generational aspiration
+- Alternative paths to consider (maybe semiconductors aren't optimal)
+- **"Success is a room-sized tube computer solving real problems, not reaching 2025 tech."**
 
 ### Data, Communication, and Software (Tier 3-4)
 
@@ -261,13 +318,18 @@ Each chapter is written to be as self-contained as possible, with cross-referenc
 - Agriculture and food surplus (enables specialization)
 - Textiles (clothing wears out)
 - Paper and printing (preserve and copy this guide!)
+- Libraries and knowledge preservation
+- Standardization (establish early!)
+- Lubricants and seals (machines die without them)
 - Salvaging materials
 - Basic metallurgy and smithing
 - Simple chemistry
 - Mechanical power (water, wind)
 - Transportation (bicycles, draft animals, boats)
 
-### Tier 1: Foundation Technology (Years 5-15)
+### Tier 1: Foundation Technology (Years 5-20)
+- Timekeeping and calendars
+- Mapping and navigation
 - Medicine and public health (penicillin production!)
 - Optics (microscopes, telescopes, lenses)
 - Electricity generation and storage
@@ -276,36 +338,49 @@ Each chapter is written to be as self-contained as possible, with cross-referenc
 - Precision metalworking
 - Glass and chemical production
 
-### Tier 2: Computing Technology (Years 10-30)
-- Vacuum tubes and simple transistors
-- Simple computers and logic circuits
-- Magnetic storage (tape, core memory)
+### Tier 2: Electromechanical Computing (Years 20-50)
+- **Relay computers** (achievable, reliable)
+- **Vacuum tube computers** (ENIAC-level capability - this is your main computing for decades)
+- Magnetic core memory (very achievable)
+- Magnetic tape and drum storage
+- Point-contact transistors (germanium, crude but educational)
 - Telephone networks
-- Basic displays and interfaces
+- Basic displays (CRT, electromechanical)
 
-### Tier 3: Modern Computing (Years 30-50)
-- Integrated circuits (SSI, MSI)
-- Basic microprocessors (4-bit, 8-bit)
-- Computer networks (local and regional)
-- Digital communications
-- Floppy disks and early hard drives
-- Simple operating systems and programming languages
+### Tier 3: Mature Tube/Early Transistor Systems (Years 50-100)
+- Mainframe-level tube computers
+- Discrete germanium/silicon transistors (individual components)
+- Transistor-tube hybrid computers
+- Magnetic disk storage
+- Early networking (local)
+- Minicomputer-level capability (PDP-8, PDP-11 equivalent would be extraordinary achievement)
+- Assembly language, BASIC, early high-level languages
 
-### Tier 4: Advanced Technology (Years 50-75)
-- Advanced microprocessors (16-bit, 32-bit)
-- Cellular networks (1G, 2G)
-- Internet protocols and services
-- High-resolution displays
-- Sophisticated software and GUIs
-- Early AI and machine learning
+### Tier 4: Small Scale Integration (Years 100-150)
+- Simple ICs: Gates, flip-flops (10-100 transistors per chip)
+- This is monumental achievement if reached
+- Building systems from many simple IC chips
+- Think: 1970s minicomputer era
+- Simple microprocessors MAYBE (4-bit, very crude)
+- Floppy disks, better hard drives
+- Simple operating systems
 
-### Tier 5: Contemporary Technology (Years 75-100+)
-- Modern processors (multi-core, GHz)
-- Advanced cellular (3G, 4G, 5G)
-- High-speed internet
-- Touchscreens and modern interfaces
-- Deep learning and advanced AI
-- Approaching pre-collapse capability
+### Tier 5: Medium Scale Integration (Years 150-200)
+- More complex ICs (100-1000 transistors)
+- Early microprocessors (Intel 4004/8008 level)
+- This requires mature semiconductor industry
+- Computer networks (regional internet)
+- Think: Late 1970s-early 1980s technology
+- 8-bit and 16-bit systems
+- Cellular networks maybe (1G)
+
+### Tier 6: Modern Computing (Years 200-300+)
+- Advanced microprocessors (32-bit, 64-bit)
+- VLSI (Very Large Scale Integration)
+- Modern computing as we know it
+- Advanced networks, internet, cellular (2G, 3G, 4G)
+- AI and machine learning
+- **This may take 300+ years. That's realistic, not pessimistic.**
 
 ## Critical Success Factors
 
