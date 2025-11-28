@@ -587,6 +587,159 @@ Building:
 - Apprenticeship system (pass skills down)
 - Document successes and failures
 
+### Knowledge Triage: The Uncomfortable Truth About Specialists
+
+**If someone in your community has pre-collapse specialized knowledge, their brain is more valuable than their hands.**
+
+This creates uncomfortable social dynamics that must be explicitly acknowledged and managed.
+
+**Priority Knowledge Carriers:**
+- Doctors, nurses, EMTs (medical knowledge)
+- Chemists, pharmacists (chemistry, drug production)
+- Engineers (mechanical, electrical, chemical, civil)
+- Machinists and skilled tradespeople (practical manufacturing)
+- Teachers (knowledge transfer)
+- Farmers (especially experienced ones)
+- Electricians and electronics technicians
+
+**The Social Problem:**
+
+In immediate survival, everyone must contribute labor. Food doesn't grow itself. Water doesn't purify itself. But if your doctor is spending 12 hours a day hauling water and planting potatoes, when do they:
+- Teach others medicine?
+- Document their knowledge?
+- Practice surgery when someone needs it?
+
+**The Uncomfortable Decision:**
+
+**Specialists should be assigned to knowledge transfer, not just manual labor.** This means:
+- Doctor spends 4 hours/day documenting medical knowledge
+- Chemist spends time teaching chemistry basics, writing procedures
+- Engineer documents machine designs and repair techniques
+- Farmer teaches crop management (not just working fields alone)
+
+**This will feel unfair to others who are exhausted from manual labor.** That's why it must be:
+1. **Explained explicitly**: "We're not saving them from work. We're saving their knowledge from being lost."
+2. **Written into community rules**: Not favoritism, it's policy
+3. **Visible**: Others should see them teaching, writing, documenting
+4. **Limited duration**: Once knowledge is transferred and documented, they return to normal labor split
+
+**Specific Actions (Week 1-2):**
+
+1. **Identify knowledge carriers**
+   - Ask: "What was your job before?"
+   - Ask: "What specialized knowledge do you have?"
+   - Don't assume (the quiet person in the corner might be a chemist)
+
+2. **Assign documentation tasks immediately**
+   - Give them paper and writing materials (salvage priority!)
+   - Specific assignment: "Write down everything you know about X"
+   - Set deadline: Within 3 months, documentation must exist
+
+3. **Assign apprentices**
+   - Every specialist gets 1-3 apprentices
+   - Apprentices split time: Labor + learning
+   - Goal: Transfer critical knowledge before specialist dies/is injured
+
+4. **Protect specialists from high-risk work**
+   - Your only surgeon should not be on the most dangerous salvage missions
+   - Your only chemist should not be doing high-risk construction
+   - This is NOT coddling, this is risk management
+   - If they die, their knowledge dies with them
+
+**The Death Scenario (Plan for It):**
+
+Specialists will die. Accidents, disease, age. You must plan for this:
+- Written documentation (see Chapter 0.7 on Libraries)
+- At least 2 people trained in critical skills (redundancy)
+- Succession planning (who learns from the apprentices?)
+- Regular knowledge tests (verify apprentices actually learned it)
+
+**Social Friction Management:**
+
+**Problem**: "Why does the doctor only work 6 hours while I work 12?"
+
+**Answer (Have This Ready):**
+"The doctor works 6 hours hauling water and 6 hours teaching three apprentices how to deliver babies and treat infections. When you're dying of dysentery, you'll be glad we did this. Their knowledge helps everyone survive. Once all three apprentices can deliver a baby safely, the doctor goes back to 12-hour days like everyone else."
+
+**Be Explicit About Timeline:**
+- First 6 months: Heavy knowledge transfer (reduced manual labor)
+- Months 6-18: Moderate (teaching + normal labor)
+- After 18 months: Full labor participation once knowledge is transferred
+
+**Failure Mode (What Happens If You Don't Do This):**
+
+Year 0: Doctor works 12 hours/day farming. No time to teach.
+Year 1: Doctor dies from dysentery (ironic but common in collapses).
+Year 2: Woman has complicated childbirth. No one knows what to do. Mother and baby die.
+Year 3: Infection spreads. No one knows how to make antibiotics. Six people die.
+Year 5: Community knows farming but has lost all medical knowledge. Preventable deaths are common.
+
+**Success Mode (What Happens If You Do This Right):**
+
+Year 0: Doctor works 6 hours farming, 6 hours teaching three apprentices. Community grumbles but accepts it.
+Year 1: Doctor dies from dysentery. Community grieves but has three trained apprentices.
+Year 2: Apprentice successfully delivers complicated baby. Mother and baby live.
+Year 3: Apprentice uses documented procedures to make crude penicillin. Infection treated. Patient lives.
+Year 5: Community has basic medical knowledge preserved. Preventable death rate dropping.
+Year 10: Original apprentices are now teaching their own students. Medical knowledge is stable.
+
+**Other Critical Knowledge to Extract:**
+
+If someone knows these, get it documented immediately:
+- **Penicillin production** (see Chapter 3.5)
+- **Electronics repair** (salvaged equipment will break)
+- **Welding and metalworking** (critical for everything)
+- **Water system design** (wells, purification, distribution)
+- **Electrical systems** (generators, wiring, safety)
+- **Concrete and construction** (structural failures kill)
+- **Canning and food preservation** (beyond what's in this guide)
+- **Veterinary medicine** (draft animals will get sick)
+- **Mechanical repair** (keeping machines running)
+
+**The Documentation Priority List:**
+
+**Week 1-4 (Immediate):**
+- Medical procedures (emergency treatment, childbirth, basic surgery)
+- Water purification (beyond what's in this chapter)
+- Food safety and preservation
+- Sanitation and disease prevention
+
+**Month 2-6 (Soon):**
+- Metallurgy and welding
+- Electrical systems
+- Mechanical repair
+- Chemistry basics
+- Construction techniques
+
+**Month 6-24 (Important):**
+- Advanced electronics
+- Computer systems (before knowledge fades)
+- Specialized manufacturing
+- Scientific procedures
+
+**Format for Documentation:**
+
+**Not This**: "Obviously you need to maintain sterile conditions during surgery."
+
+**This**:
+"Sterilize instruments by boiling in water for 15 minutes minimum. Surgeon scrubs hands for 5 minutes with soap. Use cleanest available cloth for draping. Infection kills more patients than the surgery itself. If instruments touch anything non-sterile, re-boil them."
+
+**Specific. Procedural. Assumes reader knows nothing.**
+
+**Knowledge Carrier Self-Documentation:**
+
+If YOU are a specialist, start writing NOW:
+1. Get paper and pen (salvage immediately)
+2. Write everything you know
+3. Assume your reader knows nothing
+4. Include measurements, temperatures, times, procedures
+5. Draw diagrams
+6. Note safety warnings
+7. List common mistakes
+8. Date and sign your work
+
+**Your knowledge will outlive you. Make it count.**
+
 ---
 
 ## 6. First-Year Calendar
