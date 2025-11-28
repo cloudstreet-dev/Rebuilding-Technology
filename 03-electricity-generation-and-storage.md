@@ -890,6 +890,172 @@ Inverters specify two power ratings:
 - AC distribution at 120V or 240V
 - Power: Multiple households, workshop, small industrial
 
+**Power Factor Considerations for AC Systems:**
+
+Small DC systems don't have power factor issues, but as communities scale to AC distribution with motors and transformers, power factor becomes significant.
+
+**What is power factor:**
+- Motors and transformers draw **reactive current** that doesn't do useful work
+- Reactive current flows back and forth but doesn't transfer energy
+- Creates voltage drop and heating in wiring without delivering power
+- Power factor = (Real power doing work) / (Total apparent power)
+- Range: 0 to 1.0 (1.0 = perfect, all current doing useful work)
+
+**Why it matters:**
+- Inductive loads (motors, transformers) have power factor 0.6-0.8
+- A 1 kW motor at 0.7 power factor draws current equivalent to 1.4 kW
+- Wiring must be sized for the 1.4 kW (apparent power), not the 1 kW (real power)
+- Generators work harder, wire losses increase, voltage drops more
+
+**Power factor correction:**
+- Add capacitor banks to offset inductive loads
+- Capacitors provide reactive current locally (doesn't travel through wires)
+- Improves power factor to 0.9-0.95
+- Reduces current, voltage drop, and generator loading
+
+**When to address:**
+- Small systems (<1 kW): Ignore, not worth complexity
+- Medium systems (1-10 kW) with few motors: Monitor, correct if voltage drop excessive
+- Large systems (>10 kW) with many motors: Power factor correction worth implementing
+
+**Practical approach:**
+- Measure power factor (requires specialized meter or oscilloscope)
+- Add capacitor banks (salvage from old equipment, typically 10-50 μF per kW of motor load)
+- Install near motor loads, not at generator
+
+**Note:** This is an advanced topic. Focus on getting basic AC distribution working first. Add power factor correction later when system grows and efficiency matters.
+
+## Practical Build Projects
+
+### Project 1: Salvaged Panel Test Station
+
+**Purpose:** Systematically evaluate salvaged solar panels to determine which are worth keeping
+
+**Materials:**
+- Multimeter (DC voltage and current capability)
+- Variable load resistor (10-100 ohms, 50W+ rating) or multiple fixed resistors
+- Clipboard and record sheets
+- Panel mounting frame (adjustable angle, faces south)
+
+**Build Steps:**
+
+1. **Test jig construction:**
+   - Mount panel on adjustable frame (optimize angle for sun)
+   - Wire output terminals to binding posts for easy connection
+   - Label connection points clearly (positive/negative)
+
+2. **Testing procedure:**
+   - **Open-circuit voltage (Voc):** Disconnect all loads, measure voltage in full sun
+     - Record voltage, time of day, weather conditions
+     - Compare to rated voltage on panel label
+   - **Short-circuit current (Isc):** Connect multimeter in current mode, measure briefly (<5 sec)
+     - Record current
+     - Compare to rated current
+   - **Power under load:** Connect resistor, measure voltage and current simultaneously
+     - Power (W) = Voltage × Current
+     - Test with multiple resistor values to find maximum power point
+
+3. **Record keeping:**
+   - Create panel inventory sheet: panel ID, rated power, test date, Voc, Isc, max power measured
+   - Track degradation over time (retest panels annually)
+   - Prioritize best panels for critical applications
+
+**Success criteria:** Identify which panels produce >70% of rated power (keep), which produce 30-70% (use for non-critical), which produce <30% (scrap for parts/glass)
+
+### Project 2: Hand-Crank Emergency Generator
+
+**Purpose:** Build a human-powered generator for emergency battery charging
+
+**Materials:**
+- Permanent magnet DC motor (cordless drill motor, car window motor)
+- Hand crank or bicycle pedal mechanism
+- Mounting frame (wood or metal)
+- Diode (10A, 50V+ rated) to prevent reverse current
+- Wire (14-16 gauge)
+- Optional: Voltage regulator circuit (limits voltage to safe charging range)
+
+**Build Steps:**
+
+1. **Test motor as generator:**
+   - Spin motor shaft by hand
+   - Measure voltage at terminals with multimeter
+   - Target: 12-18V at comfortable cranking speed (~60-80 RPM)
+
+2. **Mount motor to frame:**
+   - Secure motor to sturdy base (prevents wobbling)
+   - Attach crank handle to motor shaft
+   - Add gearing if needed (3:1 or 5:1 ratio for easier cranking)
+
+3. **Add diode:**
+   - Connect diode in series with positive output (cathode toward battery)
+   - Prevents battery from spinning motor backwards when not cranking
+
+4. **Wire to battery:**
+   - Red wire (positive) from motor → through diode → to battery positive
+   - Black wire (negative) from motor → to battery negative
+   - Add fuse (5-10A) in positive wire for safety
+
+5. **Test:**
+   - Connect to battery (monitor voltage with multimeter)
+   - Crank steadily (60-80 RPM)
+   - Voltage should rise to 13-14V (charging range)
+   - If too low: crank faster or add gearing
+   - If too high (>16V): add voltage regulator or crank slower
+
+**Output:** 12V, 20-50W depending on motor size and cranking effort
+
+**Use case:** Emergency phone charging, LED lights, radio power when solar/wind unavailable
+
+### Project 3: Simple Relay-Based Charge Controller
+
+**Purpose:** Prevent solar panel overcharge damage to batteries (critical safety device)
+
+**Materials:**
+- 12V automotive relay (SPDT - Single Pole Double Throw, 20A+ rating)
+- Adjustable voltage regulator/comparator circuit OR salvaged voltage sensing relay
+- Diode (10A+ rated, 50V)
+- Wire, terminal blocks
+- Enclosure (weather-resistant if outdoor installation)
+
+**Circuit Design:**
+
+**Simple version (manual disconnect):**
+1. Solar panel → Diode (prevents reverse current) → Battery
+2. Monitor battery voltage manually with multimeter
+3. Disconnect panel when battery reaches 14.4V
+4. Reconnect when battery drops below 13V (under load)
+
+**Relay version (automatic):**
+1. Voltage sensing circuit monitors battery voltage
+2. When voltage reaches 14.4V → relay opens, disconnects solar panel
+3. When voltage drops to 13.2V → relay closes, reconnects panel
+4. Diode still prevents reverse current at night
+
+**Build Steps:**
+
+1. **Diode installation:**
+   - Connect diode in series between panel positive and battery positive
+   - Cathode (band) points toward battery
+   - This alone prevents nighttime reverse current
+
+2. **Relay wiring (if building automatic version):**
+   - Relay coil connects to voltage sensing circuit
+   - Relay contacts switch panel connection on/off
+   - Set trigger points: open at 14.4V, close at 13.2V
+
+3. **Testing:**
+   - Connect to fully discharged battery in sunlight
+   - Battery should charge to 14.4V, then panel should disconnect
+   - Disconnect a load (draw battery down to 13.0V)
+   - Panel should reconnect automatically
+
+**Alternative - Use salvaged PWM charge controller:**
+- Many small solar systems have charge controllers (salvage these first)
+- Test with multimeter: should cut off at ~14.4V
+- If functional, use salvaged controller instead of building
+
+**Safety note:** Even this simple controller dramatically extends battery life compared to direct connection
+
 ## Electrical Safety
 
 **Dangers**:
@@ -980,6 +1146,74 @@ Grounding provides a safe path for fault current, preventing electrocution. When
 - Manufacturing capability for generators, batteries, wiring
 - Grid-like distribution for community
 
+## Troubleshooting Common Problems
+
+**Generator produces no voltage:**
+- **Check for magnetism:** Permanent magnets may have demagnetized (drop, excessive heat)
+  - Test with iron object (should attract strongly)
+  - Replace magnets if weak
+- **Check connections:** Broken wire, corroded terminal, disconnected brush
+  - Inspect all electrical connections visually
+  - Test continuity with multimeter
+- **Check rotation direction:** Some generators only work in one direction
+  - Reverse rotation direction and test again
+- **Field coil dead:** (for electromagnet-based generators)
+  - Test field coil resistance (should be few ohms, not open circuit)
+  - Apply external power to field coil
+
+**Battery won't charge:**
+- **Sulfation:** Lead-acid battery left discharged too long
+  - Try desulfation: repeated slow charge/discharge cycles
+  - May recover partially but capacity reduced
+- **Electrolyte level low:** Cells exposed to air
+  - Add distilled water to cover plates
+  - Never add acid unless electrolyte was spilled
+- **Shorted cell:** One cell dead
+  - Voltage reads ~10.5V instead of 12.6V (for 12V battery)
+  - Difficult to repair - may need cell replacement or new battery
+- **Charging voltage too low:** Generator/solar panel not producing enough
+  - Must exceed 13.8V to charge 12V battery
+  - Check generator output under load
+- **Reversed polarity:** Charging with wrong polarity
+  - Check connections - red to positive, black to negative
+
+**Inverter trips immediately:**
+- **Load too high:** Exceeds continuous or surge rating
+  - Disconnect all loads, reconnect one at a time to identify culprit
+  - Calculate total power draw (Watts = Volts × Amps)
+- **Short circuit:** Wiring fault creates direct connection
+  - Inspect all wiring for damage, exposed conductors touching
+  - Test each circuit separately
+- **Undersized wiring:** Voltage drop causes inverter to see overcurrent
+  - Use thicker wire for high-current loads
+  - Shorten wire runs where possible
+- **Battery voltage too low:** Inverter shuts down to protect battery
+  - Recharge battery before attempting to use inverter
+  - Check battery capacity (may be undersized for load)
+
+**Lights dim when motor starts:**
+- **Undersized wiring:** Voltage drop during high current draw
+  - Install thicker wire from battery to inverter
+  - Keep wire runs as short as possible
+- **Undersized battery bank:** Cannot supply surge current
+  - Add more batteries in parallel (increases current capacity)
+  - Use larger capacity batteries
+- **Weak battery:** Old or damaged battery with high internal resistance
+  - Load test battery (voltage should stay above 11V under load)
+  - Replace if voltage drops excessively
+
+**Solar panel not charging:**
+- **Charge controller disconnected:** Battery already full
+  - Check battery voltage (14.4V = full, controller stops charging)
+  - This is normal behavior
+- **Panel shaded:** Even partial shade drastically reduces output
+  - Ensure full sun exposure (no trees, buildings, dirt)
+- **Wiring reversed:** Polarity backwards
+  - Check connections - panel positive to controller positive
+- **Panel degraded:** Old panels lose capacity
+  - Test Voc and Isc (see Solar Panel Testing section)
+  - May need replacement if output <50% of rated
+
 ## Summary
 
 **Key Principles**:
@@ -988,6 +1222,16 @@ Grounding provides a safe path for fault current, preventing electrocution. When
 3. **Storage is critical**: Batteries enable use of intermittent power
 4. **Start small, scale up**: Begin with lighting, expand as capability grows
 5. **Safety first**: Electricity can kill—design for safety
+
+**Cross-References:**
+- **Chapter 1: Salvaging the Old World** - Prioritize salvaging solar panels, batteries, wire, motors, and generators before attempting to manufacture
+- **Chapter 2: Metallurgy and Metalworking** - Required for building generator housings, turbine blades, mounting brackets, pressure vessels
+- **Chapter 2.7: Standardization** - CRITICAL: Communities must standardize voltage selection (12V, 24V, 48V), wire color codes, connector types, and AC frequency (50Hz or 60Hz) early. Incompatible electrical standards between communities prevent collaboration and parts sharing.
+- **Chapter 2.8: Lubricants and Seals** - All generators, turbines, and motors require lubrication. Bearing failure destroys generators.
+- **Chapter 4: Essential Chemistry** - Battery manufacturing, acid production, electrolyte preparation, insulation materials
+- **Chapter 5: Electronics and Semiconductors** - DC power required for all electronics work, charge controllers, voltage regulators
+- **Chapter 6: Communication** - Telegraph, radio, telephone all require electrical power
+- **Chapter 7: Advanced Chemistry** - Petroleum refining for lubricants, advanced battery chemistries
 
 **Next Steps**: With electrical power available, you can now:
 - Build electronic components (Chapter 5)
