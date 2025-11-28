@@ -154,6 +154,54 @@ Rotating coil of wire (conductor)
 - More wire turns = higher voltage (but more resistance)
 - Thicker wire = more current capacity
 
+### Using Salvaged Motors as Generators
+
+Many post-collapse communities will have access to salvaged motors. Motors and generators are the same device running in reverse, but the details matter:
+
+**DC Motors as Generators (Simple - Works Directly):**
+
+- **Permanent magnet DC motors:** Spin the shaft, get voltage at terminals. That's it.
+  - Examples: Cordless drill motors, car window motors, small appliance motors
+  - Output voltage: Proportional to RPM (typical: 12-24V at 500-1000 RPM)
+  - Polarity: Reverse spin direction = reverse polarity
+  - **Best for:** Hand-crank generators, bike generators, small wind/hydro
+  - **Advantages:** No external excitation needed, very simple
+
+- **DC motors with field coils (not permanent magnets):**
+  - Require external power to field coil to create magnetic field
+  - Connect 12V battery to field terminals while spinning shaft
+  - Once generating, can sometimes self-excite (output powers own field)
+  - More complex, but works if permanent magnet motors unavailable
+
+**AC Induction Motors as Generators (Complex - Need Capacitors):**
+
+- **Most common salvaged motors are AC induction motors** (appliances, power tools, HVAC)
+- Induction motors have NO permanent magnets and NO brushes
+- To use as generator:
+  1. **Residual magnetism required:** Small amount of magnetism must remain in rotor
+  2. **Capacitor excitation:** Connect capacitors across output terminals
+     - Capacitance value critical (typically 10-50 μF per kW rating)
+     - Wrong value = no output or motor overheats
+  3. **Must spin faster than synchronous speed** (>1800 RPM for 60 Hz motors)
+  4. **Output frequency varies with speed** (not fixed like grid power)
+
+- **Reality:** AC induction motors as generators are finicky
+  - Capacitor sizing is trial-and-error
+  - Load changes affect voltage and frequency
+  - Only worth attempting if no DC motors available
+
+**Practical Salvage Strategy:**
+
+1. **First priority:** Permanent magnet DC motors (cordless tools, car accessories)
+2. **Second priority:** DC motors with field coils (car starters can work)
+3. **Third priority:** Car alternators (need modification - see Wind Generator section)
+4. **Last resort:** AC induction motors (complex, unreliable without proper capacitors)
+
+**Testing salvaged motors:**
+- Spin shaft by hand, measure voltage at terminals with multimeter
+- If you get voltage (even small), it's a permanent magnet motor - usable as generator
+- If no voltage, it's either induction or field-coil motor - more complex
+
 ### Water Wheel/Hydro Generator
 
 **Principle**: Flowing water turns wheel, wheel turns generator
@@ -352,7 +400,28 @@ Car alternators are designed for 1,800-6,000 RPM (engine speed). Wind/hydro appl
 - Safety valve (critical—boiler explosions are deadly)
 - Materials: Steel pipe or sheet metal
 - Pressure: 50-150 PSI (3-10 bar) for small systems
-- **WARNING**: High-pressure steam can kill. Always include safety valves and pressure gauges.
+
+⚠️ **CRITICAL SAFETY WARNING - BOILER EXPLOSIONS:**
+
+**More people have been killed by boiler explosions than any other industrial accident in history.** Boiler explosions are catastrophic: superheated water instantly flashes to steam (expands 1,600×), releasing energy equivalent to TNT. Buildings are destroyed, people are killed instantly.
+
+**DO NOT build a steam system without someone experienced in pressure vessel safety.**
+
+**Mandatory safety features:**
+- **Pressure relief valve:** MUST open before reaching design pressure (set 10% below max)
+- **Pressure gauge:** Visible, accurate, calibrated
+- **Water level indicator:** Glass tube or gauge cocks - NEVER run boiler dry
+- **Low-water cutoff:** Automatic fuel shutoff if water drops below safe level
+- **Multiple redundant safeties:** One failure should not cause explosion
+
+**Design requirements:**
+- Use thick-walled pressure-rated pipe or professionally welded pressure vessel
+- Never plug a safety valve or pressure relief
+- Test pressure relief valves monthly (pull test lever, should release steam)
+- Inspect boiler annually for corrosion, cracks, leaks
+- Never exceed design pressure - even briefly
+
+**If you don't understand pressure vessel design, do not build a boiler. Use other power generation methods.**
 
 **2. Turbine**:
 - Steam nozzle directs high-speed steam at blades
@@ -494,7 +563,17 @@ Electricity must be used as it's generated, or stored. Storage is critical for i
    - Place lead plates in dilute sulfuric acid
    - Pass DC current through (charging)
    - Positive plate converts to PbO2, negative to sponge Pb
-   - Takes hours to days
+   - **Takes days of careful charging/discharging cycles** (not hours)
+   - Multiple charge/discharge cycles improve plate formation
+   - Process is labor-intensive and requires patience
+
+**Performance Expectations:**
+- Homemade batteries will NOT match commercial quality
+- **Expect 50-70% of commercial battery performance** from homemade cells
+- Lower capacity, shorter lifespan (years instead of decades)
+- More maintenance required (check water levels frequently)
+- **But they work** - adequate for basic electrical storage needs
+
 3. **Assemble cell**:
    - Alternate positive and negative plates
    - Separators between each plate
@@ -541,6 +620,27 @@ Electricity must be used as it's generated, or stored. Storage is critical for i
 - Construction similar to lead-acid but different chemistry
 - Consider for long-term installations
 
+**Critical Advantage - Abuse Tolerance:**
+
+NiFe batteries tolerate abuse that would destroy lead-acid batteries:
+- **Deep discharge:** Can discharge to 0V repeatedly without damage (lead-acid sulfates and dies)
+- **Overcharge:** Can overcharge for extended periods without harm (lead-acid loses water, warps plates)
+- **Neglect:** Can sit discharged for months and still recover (lead-acid sulfates permanently)
+- **Temperature extremes:** Operate -20°C to 60°C (lead-acid narrows range)
+- **Mechanical shock:** Robust construction tolerates vibration (lead-acid plates can crack)
+
+**Where NiFe advantages matter:**
+- Remote installations with infrequent maintenance access
+- Harsh environments (extreme temperatures, vibration)
+- Applications where battery lifespan matters more than energy density
+- Off-grid systems where battery replacement is difficult
+
+**Trade-offs:**
+- Higher initial cost (nickel is expensive)
+- Lower voltage per cell (1.2V vs 2V for lead-acid)
+- Lower energy density (heavier and larger for same capacity)
+- **Worth it for:** Critical long-term systems where 50-year lifespan justifies higher cost
+
 **Lithium Batteries**:
 - High energy density
 - Salvage from phones, laptops, power tools
@@ -585,6 +685,50 @@ Electricity must be used as it's generated, or stored. Storage is critical for i
 - Example: 12 AWG (American Wire Gauge) = 2.05 mm diameter, 20A capacity
 - Example: 18 AWG = 1.02 mm diameter, 7A capacity
 - Undersized wire overheats and can cause fires
+
+**Wire Insulation Types and Post-Collapse Substitutes:**
+
+Proper insulated wire may become scarce. Alternatives and substitutes:
+
+**Salvage Priority (best to worst):**
+1. **Modern insulated wire** (PVC, rubber, THHN) - salvage from buildings, vehicles, appliances
+2. **Magnet wire** (enamel-coated thin copper) - from motors, transformers, speakers
+3. **Bare copper wire** - must be insulated manually (see below)
+
+**Improvised Insulation Methods:**
+
+1. **Waxed cloth wrapping:**
+   - Soak cotton cloth strips in melted paraffin wax or beeswax
+   - Wrap tightly around bare wire in overlapping layers
+   - Heat with flame briefly to fuse layers together
+   - Good for: Low voltage (<50V), dry locations, temporary installations
+   - Limitations: Not waterproof long-term, degrades over years
+
+2. **Rubber tubing:**
+   - Salvage latex/rubber tubing (medical, automotive vacuum lines)
+   - Slide over wire connections and joints
+   - Good for: Strain relief, protecting splices, waterproofing
+   - Limitations: Rubber degrades with heat and ozone
+
+3. **Varnish coating:**
+   - Multiple coats of shellac, polyurethane varnish, or tree resin
+   - Apply thin coats, dry between applications
+   - Build up 0.5-1mm thickness
+   - Good for: Magnet wire replacement, coil windings
+   - Limitations: Brittle, cracks with flexing
+
+4. **Physical separation (no insulation):**
+   - Mount bare wires on insulators (ceramic, glass, dry wood)
+   - Space wires 25mm+ apart to prevent arcing
+   - Secure with non-conductive spacers
+   - Good for: High voltage outdoor installations, low current
+   - Limitations: Dangerous - exposed conductors, weather affects spacing
+
+**Best practice:**
+- Salvage modern wire wherever possible
+- Use multiple insulation methods (waxed cloth + rubber tubing)
+- Avoid bare wire for anything above 24V or high current
+- See **Chapter 2.7: Standardization** for wire color coding standards
 
 **Voltage Drop**: Long wire runs lose voltage to resistance
 ```
@@ -717,6 +861,29 @@ Voltage drop = Current × Resistance of wire
 - Inverter (2,000W continuous, 4,000W surge)
 - Power: Above + power tools, welder (short bursts), small machinery
 
+**Why Both Continuous and Surge Ratings Matter:**
+
+Inverters specify two power ratings:
+- **Continuous (2,000W):** Power the inverter can deliver indefinitely
+- **Surge (4,000W):** Power the inverter can deliver briefly (typically 5-30 seconds)
+
+**Surge capacity is critical for motor startup.** Electric motors draw 3-6× their running current for the first few seconds as they overcome inertia and start spinning.
+
+**Examples:**
+- 500W table saw: 500W running, but 2,000-3,000W for 2-3 seconds at startup
+- 1/2 HP drill press: 375W running, 1,500-2,000W startup surge
+- Refrigerator compressor: 150W running, 600-900W startup
+
+**Without adequate surge capacity:**
+- Inverter trips overcurrent protection immediately
+- Motor fails to start
+- Inverter may be damaged from repeated overload attempts
+
+**Design practice:**
+- Continuous rating = sum of all loads you'll run simultaneously
+- Surge rating = 2-4× continuous rating (to handle motor startups)
+- If workshop has multiple motors, only one typically starts at a time
+
 ### Community System
 - 10 kW generation (hydro ideal, mix of solar/wind acceptable)
 - Large battery bank or direct use
@@ -740,6 +907,43 @@ Voltage drop = Current × Resistance of wire
 - **Fuses and circuit breakers**: Disconnect power if overcurrent
 - **Insulation**: All wires fully insulated, no exposed conductors
 - **Grounding**: Metal enclosures grounded to earth
+
+**Grounding Systems (Critical Safety Feature):**
+
+Grounding provides a safe path for fault current, preventing electrocution. When a live wire touches a metal enclosure, the ground connection conducts fault current back to the source, tripping breakers/fuses instead of electrocuting anyone who touches the equipment.
+
+**How to Ground Equipment:**
+
+1. **Ground Rod Installation:**
+   - Drive 8-foot copper or galvanized steel rod into earth
+   - Location: Moist soil preferred (better conductivity)
+   - Depth: Minimum 8 feet (2.4m), deeper is better
+   - Multiple rods: Space 6+ feet apart if soil resistivity is high
+
+2. **Ground Wire Connection:**
+   - Use heavy copper wire (6 AWG or thicker for main ground)
+   - Connect from ground rod to main electrical panel
+   - Bond all metal enclosures (generator housings, battery boxes, inverters, panels) to ground wire
+   - Use secure mechanical connections (bolts, clamps), not just wire wrapping
+
+3. **Verification:**
+   - Measure resistance from ground wire to earth: Should be <25 ohms (preferably <10)
+   - If too high: Add more ground rods, improve soil moisture, use longer rods
+
+**Why grounding works:**
+- Normal operation: Ground wire carries no current (just safety backup)
+- Fault condition: Live wire contacts metal case → high current flows through ground → trips breaker/fuse instantly
+- Without ground: Metal case becomes energized → person touches it → electrocution
+
+**Critical components to ground:**
+- Generator frames and housings
+- Battery enclosures (metal)
+- Inverter chassis
+- Metal conduit and junction boxes
+- Any metal equipment connected to electrical system
+
+**Grounding vs Neutral:** Not the same. Neutral carries return current (part of circuit). Ground is safety-only, should never carry current during normal operation.
+
 - **Lockout/tagout**: Disconnect power before working, lock switch, tag to warn others
 - **Test before touch**: Use multimeter to verify power is off
 - **One hand rule**: Keep one hand behind back when working on live circuits (prevents current across heart)
