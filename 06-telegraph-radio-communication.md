@@ -17,6 +17,35 @@ Communication technology progresses in stages:
 
 This chapter focuses on telegraph (simplest electrical communication) and radio (most useful early wireless technology).
 
+**Chapter Dependencies and Cross-References:**
+
+This chapter enables critical communication capabilities. For complete implementation, reference:
+
+**Prerequisites (Read First):**
+- **Chapter 3: Electricity** — Power generation, batteries, DC/AC principles, power supplies
+- **Chapter 5: Basic Electronics Components** — Resistors, capacitors, inductors, transformers, diodes
+- **Chapter 2: Metalworking** — Wire production (copper drawing), antenna construction, chassis fabrication
+- **Chapter 7: Vacuum Tubes** — Tube-based amplifier and oscillator designs (historical approach)
+- **Chapter 8: Semiconductors** — Transistor-based designs (modern approach if achievable)
+
+**Applications Enabled (Read After):**
+- **Chapter 9+: Computers** — Digital communication, networks, internet protocols
+- **Chapter 3.3: Timekeeping** — Broadcast time signals for synchronization
+- **Chapter 3.4: Navigation** — Radio direction finding, beacon navigation
+- **Trade coordination** — Market information, pricing, supply/demand
+- **Emergency response** — Warnings, rescue coordination, disaster management
+- **Weather reporting** — Agricultural planning, storm warnings
+
+**Related Techniques:**
+- **Chapter 5.5: Optics** — Heliograph (visual line-of-sight communication alternative)
+- **Chapter 4: Chemistry** — Battery construction for power supplies
+
+**Why This Chapter is Critical:**
+
+**Wire requirements constrain expansion**. Telegraph systems consumed enormous quantities of copper wire historically. Post-collapse wire salvage and later copper production directly limit communication network growth. A single long-distance telegraph line may require tons of copper—this is not a trivial material requirement.
+
+Communication enables coordination. Isolated communities rebuild slowly. Connected communities share knowledge, warn of dangers, coordinate trade, and maintain social cohesion. The difference between isolated subsistence and coordinated rebuilding is communication technology.
+
 ## Telegraph Systems
 
 ### Simple Telegraph (On/Off Signaling)
@@ -75,9 +104,39 @@ Battery(+) → Key → Wire (miles) → Sounder → Wire/Ground → Battery(-)
 
 **SOS Distress Signal**: ··· −−− ··· (easy to recognize)
 
-**Range**: Limited by wire resistance and battery voltage
-- With 12V battery and good wire: 20-50 km
-- Repeater stations can extend range indefinitely
+**Range**: Depends heavily on wire gauge, sounder sensitivity, and voltage
+
+**Practical ranges:**
+- **12V battery, heavy wire (AWG 10-12)**: 20-50 km
+- **12V battery, thin wire (AWG 18-20)**: 5-15 km (resistance limits current)
+- **Higher voltage (50-100V)**: 100-200 km possible
+- **Historical systems**: Used 100V+ for long distances
+
+**Wire gauge matters**:
+- Thicker wire = lower resistance = longer range
+- AWG 10 (2.6mm): ~3.3 Ω/km
+- AWG 18 (1.0mm): ~21 Ω/km (6× more resistance!)
+- For 50km line: AWG 10 = 165Ω total, AWG 18 = 1050Ω total
+
+**Repeater Stations Enable Unlimited Range**:
+
+This is the KEY concept: Each relay regenerates the signal.
+
+**How repeaters work**:
+1. **Incoming weak signal** activates sensitive relay
+2. **Relay closes** local circuit with fresh battery
+3. **Strong signal sent** to next station
+4. **Repeat** at each station
+
+**Result**: Signal never degrades beyond one hop. With repeaters every 50-100km, you can span continents.
+
+**Historical example**: 1861 transcontinental telegraph (USA) used dozens of repeater stations across 3,000+ km. Each station had operator who manually re-keyed messages, or automatic relays that electronically repeated signals.
+
+**Post-collapse strategy**:
+- Start with local links (20-50km, no repeaters)
+- Add repeater stations as network grows
+- Solar-powered repeaters on hilltops (unattended operation)
+- Eventually: Hundreds of stations = continent-wide network
 
 ### Printing Telegraph
 
@@ -474,6 +533,69 @@ Antenna → Tuning coil ← Variable capacitor → Diode → Headphones → Grou
 
 ## Practical Communication Systems
 
+### Radio Frequency Allocation for Post-Collapse Use
+
+Without regulatory bodies, communities must self-coordinate. These frequency ranges offer the best practical characteristics for different applications:
+
+| Frequency Range | Primary Use | Propagation | Antenna Size | Notes |
+|-----------------|-------------|-------------|--------------|-------|
+| **500-1600 kHz** | AM Broadcasting | Wide area, ground wave | Large (100-300m) | Good for news/information distribution, works day and night |
+| **1.8-2.0 MHz** | Local/Regional HF | Ground wave + night skip | Medium (40-80m) | Excellent night propagation, "160 meter band" |
+| **3.5-4.0 MHz** | Regional HF | Day and night, reliable | Medium (20-40m) | Good all-around, "80 meter band", works in all conditions |
+| **7.0-7.3 MHz** | Medium Distance HF | 200-1000 km typical | Medium (10-20m) | "40 meter band", best all-around HF frequency |
+| **14.0-14.35 MHz** | Long Distance HF | Worldwide daytime | Small (10m) | "20 meter band", daytime DX, solar cycle dependent |
+| **21.0-21.45 MHz** | Long Distance HF | Worldwide, good sun | Small (7m) | "15 meter band", requires solar activity |
+| **28-30 MHz** | Long Distance HF | Worldwide, peak sun | Small (5m) | "10 meter band", best during solar maximum, dead at solar minimum |
+| **50-54 MHz** | Regional VHF | Line-of-sight + skip | Small (3m) | "6 meter band", occasional long-distance openings |
+| **144-148 MHz** | Local VHF | Line-of-sight only | Very small (1m) | "2 meter band", FM voice, repeaters, most popular VHF |
+| **420-450 MHz** | Local UHF | Line-of-sight | Tiny (35cm) | "70 cm band", short range, good for portable/mobile |
+
+**Bandwidth Allocations Within Each Band:**
+- **CW (Morse code)**: Lower portion of each band (most efficient, narrowest bandwidth)
+- **Phone (Voice)**: Upper portion of each band (SSB for HF, FM for VHF/UHF)
+- **Digital modes**: Scattered throughout (packet radio, RTTY, etc.)
+- **Emergency frequencies**: Designated specific frequencies for distress calls
+
+**SSB Sideband Conventions** (Critical for Compatibility):
+- **Below 10 MHz**: Lower Sideband (LSB) is standard
+  - 1.8 MHz, 3.5 MHz, 7 MHz: Use LSB
+- **Above 10 MHz**: Upper Sideband (USB) is standard
+  - 14 MHz, 21 MHz, 28 MHz, 50 MHz: Use USB
+- **Why this matters**: If everyone uses the same convention, communication is possible without confusion
+
+**Recommended Emergency Frequencies** (Post-Collapse Coordination):
+- **7.200 MHz**: Primary HF emergency frequency (day/night, reliable)
+- **14.300 MHz**: Secondary HF emergency (daytime, long distance)
+- **146.52 MHz**: VHF simplex calling/emergency (FM, local)
+- **3.750 MHz**: Night emergency frequency (80m, good coverage)
+
+**Time-Based Schedules** (If Continuous Monitoring Not Possible):
+- **Morning net**: 0800 local time on 7.200 MHz (check-ins, message traffic)
+- **Evening net**: 1900 local time on 3.750 MHz (regional coordination)
+- **Emergency**: Monitor 7.200 MHz continuously (if possible)
+
+**Frequency Selection Criteria:**
+
+**For 24/7 Reliability**: 7 MHz (40m) and 3.5 MHz (80m)
+- Work day and night
+- Not too dependent on solar activity
+- Medium antenna size (manageable)
+
+**For Maximum Range**: 14 MHz (20m) daytime, 7 MHz (40m) nighttime
+- 14 MHz can reach worldwide during day
+- 7 MHz provides night coverage
+
+**For Local Coordination**: 144-148 MHz (2m VHF FM)
+- Simple equipment
+- Line-of-sight propagation (predictable)
+- Small antennas
+- Good for repeater networks
+
+**Solar Cycle Considerations**:
+- **Solar Maximum** (~11 year cycle): Higher frequencies (14-28 MHz) work well
+- **Solar Minimum**: Stick to lower frequencies (3.5-7 MHz), high bands may be dead
+- **Post-collapse**: May not know where in solar cycle you are—test all bands
+
 ### Local Network (Within 50 km)
 
 **Technology**: VHF FM transceivers
@@ -564,6 +686,88 @@ Antenna → Tuning coil ← Variable capacitor → Diode → Headphones → Grou
 **Transmitter Power**:
 - Low power (10-100W): Local coverage
 - High power (1-10 kW): Regional coverage
+
+## First Radio to Build: Learning Progression
+
+Don't start with a complex transceiver. Build skills progressively.
+
+**1. Crystal Radio (Receive AM Broadcast)** - **Start here**
+- **Time**: 1-2 days
+- **Complexity**: Easiest (no power source!)
+- **What you learn**: Tuning, resonance, antenna basics
+- **Components**: Coil, variable capacitor, diode, headphones
+- **Capabilities**: Receive local AM broadcast stations (if any exist)
+- **Limitations**: No amplification, weak signal, headphones only
+- **Why first**: Proves radio works, builds confidence, requires minimal components
+
+**2. One-Tube Regenerative Receiver (Better Sensitivity)** - **Second project**
+- **Time**: 1 week
+- **Complexity**: Moderate
+- **What you learn**: Vacuum tube operation, feedback, oscillation control
+- **Components**: One triode tube, coil, capacitors, resistors, headphones, battery/power supply
+- **Capabilities**:
+  - Much more sensitive than crystal radio
+  - Can receive distant stations
+  - Adjustable regeneration (positive feedback) increases sensitivity
+- **Limitations**: Tricky to tune (can oscillate), no loudspeaker (unless you add audio amp)
+- **Why second**: Introduces active amplification, still relatively simple
+
+**3. Simple CW Transmitter (Communicate Locally)** - **Third project**
+- **Time**: 1-2 weeks
+- **Complexity**: Moderate
+- **What you learn**: Oscillator design, keying, output coupling, antenna tuning
+- **Components**: Oscillator tube/transistor, tank circuit, telegraph key, power supply, antenna
+- **Capabilities**:
+  - Transmit Morse code
+  - Range: 5-50 km (depends on power and frequency)
+  - Two-way communication with other stations
+- **Limitations**: Morse code only (no voice), requires license/coordination
+- **Why third**: Enables actual communication, not just listening
+
+**4. Simple AM Transmitter (Voice Communication)** - **Fourth project**
+- **Time**: 2-4 weeks
+- **Complexity**: Moderate-High
+- **What you learn**: Modulation, audio amplification, microphone circuits
+- **Components**: Oscillator, modulator, RF amplifier, microphone, audio amp, power supply
+- **Capabilities**:
+  - Voice communication
+  - Range: 5-50 km
+  - Much easier to use than CW (no Morse code needed)
+- **Limitations**: Lower efficiency than CW, wider bandwidth
+- **Why fourth**: Voice is more natural than Morse for most users
+
+**5. Superheterodyne Receiver (Proper Selectivity)** - **Fifth project**
+- **Time**: 4-8 weeks
+- **Complexity**: High
+- **What you learn**: Frequency conversion, IF amplification, multi-stage design
+- **Components**: Mixer, local oscillator, IF transformers, detector, audio amp, multiple tubes/transistors
+- **Capabilities**:
+  - Excellent selectivity (separate closely-spaced stations)
+  - Good sensitivity
+  - Stable tuning
+  - Loudspeaker operation
+- **Limitations**: Complex, many components, alignment required
+- **Why fifth**: This is the "professional" receiver design, worth the effort
+
+**6. SSB Transceiver (Efficient HF Communication)** - **Long-term goal**
+- **Time**: Months
+- **Complexity**: Very High
+- **What you learn**: Balanced modulators, filtering, product detection, transmit/receive switching
+- **Components**: Many tubes/transistors, crystal filter, mixer stages, VFO, linear amplifier
+- **Capabilities**:
+  - Most efficient voice mode (2-3× range of AM for same power)
+  - Industry standard for HF communication
+  - Worldwide communication possible (with good propagation)
+- **Limitations**: Very complex, difficult alignment, requires good test equipment
+- **Why last**: This is advanced, but becomes the workhorse for long-distance communication
+
+**Recommended Timeline** (for community with 5-10 dedicated individuals):
+- **Year 1**: Crystal radios, regenerative receivers, simple CW transmitters
+- **Year 2-3**: AM transmitters/receivers, superheterodyne receivers
+- **Year 3-5**: SSB transceivers, repeater stations
+- **Year 5+**: Network of stations, emergency protocols, broadcasting
+
+**Don't skip steps**. Each project teaches essential skills for the next. A failed superheterodyne receiver wastes months. A successful crystal radio builds confidence and knowledge.
 
 ## Building a Complete Radio Station
 
