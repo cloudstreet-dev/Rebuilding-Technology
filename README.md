@@ -88,6 +88,16 @@ Each chapter is written to be as self-contained as possible, with cross-referenc
 - Sewing and clothing construction
 - Timeline and labor requirements
 
+**[Chapter 2.6: Mechanical Systems](02.6-mechanical-systems.md)**
+- Power transmission fundamentals
+- Gears (spur, helical, bevel, worm) - design and manufacture
+- Bearings (plain, ball, roller, needle)
+- Shafts, couplings, and universal joints
+- Linkages and cam mechanisms
+- Springs, clutches, and brakes
+- Hydraulics and pneumatics
+- Failure modes and troubleshooting
+
 **[Chapter 2.7: Standardization](02.7-standardization.md)** ⚠️ **ESTABLISH EARLY**
 - Why standards matter (interchangeability, collaboration, trade)
 - Units of measurement (length, mass, volume, temperature)
@@ -302,6 +312,94 @@ Each chapter is written to be as self-contained as possible, with cross-referenc
 - AI ethics and safety
 - Roadmap for rebuilding AI
 
+### Organization and Governance
+
+**[Chapter 17: Governance and Organization](17-governance-and-organization.md)**
+- Community organization models (guild, collective, council, federation)
+- Roles and responsibilities for technology rebuilding
+- The apprenticeship system
+- Resource allocation frameworks
+- Knowledge management and documentation
+- Trade and inter-community relations
+- Conflict resolution
+- Long-term sustainability and generational transition
+- Scaling up (village to town to city)
+
+### Appendices
+
+**[Appendix A1: Master Materials List](A1-master-materials-list.md)**
+- Consolidated materials from all chapters
+- Priority classification (1-4) for salvage
+- Properties and uses
+- Salvage sources and natural sources
+- Material substitution guide
+- Annual consumption estimates
+
+**[Appendix A2: Master Tools List](A2-master-tools-list.md)**
+- Bootstrap sequence (tools to make tools)
+- Tool tier classification (0-4)
+- Minimum viable toolkit by technology level
+- Making your own tools (files, drill bits, taps/dies)
+- Tool maintenance and repair
+
+**[Appendix A3: Unified Timeline](A3-unified-timeline.md)**
+- Consolidated timeline from all chapters
+- Technology dependencies (what requires what)
+- Critical path analysis
+- Phase breakdown (0-4) with milestones
+- Community size vs. timeline estimates
+
+**[Appendix A4: Unit Conversions](A4-unit-conversions.md)**
+- Length, area, volume, mass conversions
+- Temperature conversions
+- Pressure, force, torque, power, energy
+- Quick reference card
+- Historical units
+- Memory aids for mental conversions
+
+**[Appendix A5: Standard Specifications](A5-standard-specifications.md)**
+- Wire gauges (AWG, SWG, metric)
+- Sheet metal gauges
+- Pipe sizes (NPS, copper, metric)
+- Thread standards (UNC/UNF, metric, NPT, BSP)
+- Fastener specifications and bolt grades
+- Drill bit sizes
+- Keys/keyways, bearings, O-rings
+- Electronic component values
+
+**[Appendix A6: Glossary](A6-glossary.md)**
+- 200+ technical terms A-Z
+- Abbreviations table
+- Symbols reference
+
+**[Appendix A7: Climate and Geographic Variations](A7-climate-geographic-variations.md)**
+- Climate zone characteristics (tropical, arid, cold, coastal, etc.)
+- Technology adaptations by climate
+- Regional resource availability
+- Timeline adjustments by climate
+- Community assessment checklist
+
+**[Appendix A8: Cross-Reference Index](A8-cross-reference-index.md)**
+- Alphabetical topic listing with chapter references
+- Topic clusters for multi-chapter subjects
+- Cross-references between related topics
+- "Where to find it" quick lookup
+
+**[Appendix A9: Quality Control and Testing](A9-quality-control.md)**
+- Testing procedures by technology area
+- Visual inspection, dimensional checks, functional tests
+- Pass/fail criteria
+- Documentation templates
+- Establishing a quality system
+
+**[Appendix A10: Scaling Guidance](A10-scaling-guidance.md)**
+- Minimum viable community sizes for each technology
+- Scaling thresholds (50, 150, 500, 2000, 10000 people)
+- Technology-specific scaling guidance
+- Economic analysis for scaling decisions
+- Organizational scaling requirements
+- Decision framework
+
 ## Technology Tier Summary
 
 ### Tier -1: Immediate Survival (Years 0-2)
@@ -433,12 +531,13 @@ Good luck.
 
 ## Version Information
 
-- **Version**: 1.0
+- **Version**: 2.0
 - **Date**: 2025
 - **Status**: Comprehensive technical guide for post-apocalyptic technological recovery
 - **Intended Audience**: Survivors with basic literacy and mathematical understanding
-- **Time Horizon**: Immediate survival through 100+ years of technological development
-- **Coverage**: Salvage through AI and modern computing
+- **Time Horizon**: Immediate survival through 300+ years of technological development
+- **Coverage**: 21 chapters (survival through AI) + 10 appendices (reference materials)
+- **Total Content**: ~40,000+ lines of technical guidance
 
 ## Contributing and Corrections
 
